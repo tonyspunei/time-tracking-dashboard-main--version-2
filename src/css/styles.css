@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  /* Colors -- Primary */
+  --blue: hsl(246, 80%, 60%);
+
+  --lightRed-work: hsl(15, 100%, 70%);
+  --softBlue-play: hsl(195, 74%, 62%);
+  --lightRed-study: hsl(348, 100%, 68%);
+  --limeGreen-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --softOrange-ss: hsl(43, 84%, 65%);
+
+  /* Colors -- Neutral */
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--veryDarkBlue);
+
+  /* Mobile */
+  padding: 81px 24px 0 24px;
+  position: relative;
+}
+
+/* Profile Box -- Jeremy Robson */
+.profile__box {
+  height: 203px;
+  width: 327px;
+  background-color: var(--darkBlue);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.report-profile {
+  height: 133px;
+  background-color: var(--blue);
+  border-radius: 0 0 15px 15px;
+  padding: 32px 29px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  height: 68px;
+  width: auto;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.profile-name {
+  color: var(--paleBlue);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.profile-name span {
+  color: var(--white);
+  font-size: 18px;
+}
+
+.data-buttons {
+  height: 34%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 25px 0 35px;
+}
+.timeframe {
+  color: var(--desaturatedBlue);
+}
+.timeframe input {
+  display: none;
+}
+.timeframe label {
+  font-size: 16px;
+  padding-bottom: 2em;
+  cursor: pointer;
+}
+.timeframe input:checked + label {
+  color: var(--white);
+}
+
+/* Tracking Boxes Styles */
+.hobby-boxes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.hobby-box {
+  height: 160px;
+  width: 327px;
+  margin: 0 auto;
+  margin-top: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-icon {
+  position: absolute;
+  right: 17px;
+  top: -11px;
+  z-index: 1;
+}
+
+.box-description {
+  position: relative;
+  height: 120px;
+  background-color: var(--darkBlue);
+  margin-top: 45px;
+  z-index: 10;
+  border-radius: 17px 17px 0 0;
+  padding: 30px 25px;
+  color: var(--white);
+}
+.box-description:hover {
+  background-color: hsl(236, 45%, 31%);
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+#more-icon {
+  cursor: pointer;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-hours {
+  font-size: 26px;
+}
+.last-week-info {
+  font-size: 14px;
+  color: var(--paleBlue);
+}
+
+/* Hobby Boxes - Colors */
+#work {
+  background-color: var(--lightRed-work);
+}
+#play {
+  background-color: var(--softBlue-play);
+}
+#study {
+  background-color: var(--lightRed-study);
+}
+#exercise {
+  background-color: var(--limeGreen-exercise);
+}
+#social {
+  background-color: var(--violet-social);
+}
+#self-care {
+  background-color: var(--softOrange-ss);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 992px) {
+  body {
+    display: flex;
+    padding: 111px 15px 0 0;
+    padding-left: 12.5%;
+    align-items: center;
+  }
+
+  /* PROFILE BOX */
+  .profile__box {
+    height: 518px;
+    min-width: 255px;
+    margin: 0;
+  }
+  .report-profile {
+    height: 68%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px 29px;
+  }
+  .profile-image {
+    height: 84px;
+    margin-bottom: 42px;
+  }
+  .profile-name {
+    font-size: 15px;
+  }
+  .profile-name span {
+    font-size: 28px;
+  }
+  .data-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 28px 33px 36px 28px;
+  }
+
+  /* HOBBY BOXES */
+  .hobby-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    max-width: 860px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+  .hobby-box {
+    height: 244px;
+    width: 255px;
+    margin: 15px;
+  }
+  .box-description {
+    height: 82%;
+  }
+  .top-row {
+    margin-bottom: 30px;
+  }
+  .bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .box-hours {
+    font-size: 42px;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1302px) {
+  .profile__box {
+    height: 793px;
+  }
+  .profile-name {
+    font-size: 22px;
+  }
+  .profile-name span {
+    font-size: 38px;
+  }
+  .data-buttons {
+    padding: 38px 33px 50px 28px;
+  }
+  .timeframe label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    padding: 81px 10px 0 10px;
+  }
+  .profile__box {
+    width: 100%;
+    margin: 0;
+  }
+  .hobby-box {
+    width: 100%;
+    margin: 0;
+    margin-top: 24px;
+  }
+}

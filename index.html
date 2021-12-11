@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <section class="profile__box">
+      <!-- Report to ... Box -->
+      <div class="report-profile">
+        <img
+          src="./images/image-jeremy.png"
+          alt="profile image"
+          class="profile-image"
+        />
+        <p class="profile-name">
+          Resport for <br />
+          <span>Jeremy Robson</span>
+        </p>
+      </div>
+
+      <div class="timeframe data-buttons">
+        <input
+          type="radio"
+          name="timeframe"
+          id="daily"
+          value="daily"
+          onclick="renderStats()"
+        />
+        <label for="daily">Daily</label>
+
+        <input
+          type="radio"
+          name="timeframe"
+          id="weekly"
+          value="weekly"
+          onclick="renderStats()"
+          checked
+        />
+        <label for="weekly">Weekly</label>
+
+        <input
+          type="radio"
+          name="timeframe"
+          id="monthly"
+          value="monthly"
+          onclick="renderStats()"
+        />
+        <label for="monthly">Monthly</label>
+      </div>
+    </section>
+
+    <section class="hobby-boxes">
+      <!-- Tracking Box -- WORK -->
+      <div class="hobby-box" id="work">
+        <img src="./images/icon-work.svg" alt="work-icon" class="box-icon" />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Work</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Box -- PLAY -->
+      <div class="hobby-box" id="play">
+        <img src="./images/icon-play.svg" alt="play-icon" class="box-icon" />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Play</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Box -- STUDY -->
+      <div class="hobby-box" id="study">
+        <img src="./images/icon-study.svg" alt="study-icon" class="box-icon" />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Study</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Box -- Exercise -->
+      <div class="hobby-box" id="exercise">
+        <img
+          src="./images/icon-exercise.svg"
+          alt="exercise-icon"
+          class="box-icon"
+        />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Exercise</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Box -- SOCIAL -->
+      <div class="hobby-box" id="social">
+        <img
+          src="./images/icon-social.svg"
+          alt="social-icon"
+          class="box-icon"
+        />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Social</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking Box -- SELF-CARE -->
+      <div class="hobby-box" id="self-care">
+        <img
+          src="./images/icon-self-care.svg"
+          alt="social-icon"
+          class="box-icon"
+        />
+
+        <div class="box-description">
+          <!-- Top Row -- box name and more icon -->
+          <div class="top-row">
+            <p class="box-name">Self Care</p>
+            <img
+              src="./images/icon-ellipsis.svg"
+              alt="more-icon"
+              id="more-icon"
+            />
+          </div>
+
+          <!-- Bottom Row -- hours and last week hours -->
+          <div class="bottom-row">
+            <p class="box-hours"></p>
+            <p class="last-week-info">
+              <span class="last-week-hours"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/js/data.js"></script>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
